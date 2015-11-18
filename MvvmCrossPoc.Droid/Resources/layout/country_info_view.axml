@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pull Data"
+        local:MvxBind="Click PullDataCommand" />
+    <Mvx.MvxListView
+        android:id="@+id/country_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxBind="ItemsSource CountryData"
+        local:MvxItemTemplate="@layout/county_info_cell" />
+</LinearLayout>
